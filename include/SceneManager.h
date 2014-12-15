@@ -9,6 +9,9 @@
 #include "Lab5.h"
 #include "Lab6.h"
 #include "Lab7.h"
+#include "Lab8.h"
+#include "Lab9.h"
+#include "Lab10.h"
 #include "Lab15.h"
 #include <iostream>
 #include <vector>

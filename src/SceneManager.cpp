@@ -47,21 +47,43 @@ int SceneManager::menuOption()
         case 1:
             m_currentScene = new Lab1();
             break;
+
         case 2:
             m_currentScene = new Lab2();
             break;
+
         case 3:
             m_currentScene = new Lab3();
             break;
+
         case 4:
             m_currentScene = new Lab4();
             break;
+
         case 5:
             m_currentScene = new Lab5();
             break;
+
+        case 6:
+            m_currentScene = new Lab6();
+            break;
+
         case 7:
             m_currentScene = new Lab7();
             break;
+
+        case 8:
+            m_currentScene = new Lab8();
+            break;
+
+        case 9:
+            m_currentScene = new Lab9();
+            break;
+
+        case 10:
+            m_currentScene = new Lab10();
+            break;
+
         case 15:
             m_currentScene = new Lab15();
             break;

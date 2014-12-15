@@ -92,17 +92,20 @@ void Lab7::inputVariables()
 
     cout << endl << "Nivel de Produccion: " << m_levelProduction << endl;
     cout << endl << m_word << endl;
-    cout << endl << "Para GRAFICAR presione una tecla...";
-    system("pause >> null");
 }
 
 void Lab7::drawScene()
 {
+    glPushMatrix();
+    glScalef(0.8f, 0.8f, 0.8f);
+
     if ( m_rulesF.empty())
         this->LSystem(m_word, 0, -25);
     else
         for(int i = 0; i < m_LSEstocasticos.size(); i++)
             LSystem(m_LSEstocasticos.at(i), (i*15) -30, -25);
+
+    glPopMatrix();
 }
 
 void Lab7::DrawString(string message)
