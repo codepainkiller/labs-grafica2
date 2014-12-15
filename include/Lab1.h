@@ -15,6 +15,7 @@ class Lab1 : public Scene
         void inputVariables();
 
         void drawScene();
+        void drawSnowMan();
 
     protected:
     private:

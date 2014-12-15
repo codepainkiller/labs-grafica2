@@ -2,8 +2,8 @@
 
 Scene::Scene()
 {
-    this->mRenderMode = RENDER_3D;
-    this->mViewMode   = VIEW_ISOMETRIC;
+    this->m_renderMode = RENDER_3D;
+    this->m_viewMode   = VIEW_ISOMETRIC;
 }
 
 Scene::~Scene()
@@ -13,11 +13,30 @@ Scene::~Scene()
 
 unsigned Scene::getRenderMode()
 {
-    return this->mRenderMode;
+    return m_renderMode;
 }
 
 unsigned Scene::getViewMode()
 {
-    return this->mViewMode;
+    return m_viewMode;
+}
+
+void Scene::setRenderMode(const unsigned mode)
+{
+    m_renderMode = mode;
+}
+
+void Scene::setViewMode(const unsigned mode)
+{
+    m_viewMode = mode;
+}
+void Scene::setOrthoSize(unsigned size)
+{
+    m_orthoSize = size;
+}
+
+unsigned Scene::getOrthoSize()
+{
+    return m_orthoSize;
 }
 

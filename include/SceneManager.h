@@ -5,7 +5,11 @@
 #include "Lab1.h"
 #include "Lab2.h"
 #include "Lab3.h"
+#include "Lab4.h"
+#include "Lab5.h"
+#include "Lab6.h"
 #include "Lab7.h"
+#include "Lab15.h"
 #include <iostream>
 #include <vector>
 
@@ -23,7 +27,7 @@ class SceneManager
 
         void     setCurrentScene(unsigned index);
 
-        Scene*   getCurrenScene();
+        Scene*   getCurrentScene();
 
 
     private:

@@ -5,28 +5,6 @@ SceneManager::SceneManager()
     cout << " Inicializando Scene Manager..." << endl;
     cout << " Cargando escenas..." << endl;
     this->showMenu();
-    /*
-    this->addScene(new Lab1());
-    this->addScene(new Lab2());
-    this->addScene(new Lab2());
-    this->addScene(new Lab2());
-    this->addScene(new Lab2());
-    this->addScene(new Lab2());
-    this->addScene(new Lab7());
-    this->setCurrentScene(0);
-
-
-    cout << " Escenas cargadas...[OK]" << endl;
-
-    // Capturando opcion
-    this->showMenu();
-    int select = this->menuOption();
-
-    if ( select != -1)
-        this->setCurrentScene(select-1);
-    else
-        cout << " Ocion incorrecta!" << endl;
-    */
 }
 
 SceneManager::~SceneManager()
@@ -52,7 +30,7 @@ void SceneManager::setCurrentScene(unsigned index)
         cout << "No se puede asignar la escena " << index << endl;
 }
 
-Scene* SceneManager::getCurrenScene()
+Scene* SceneManager::getCurrentScene()
 {
     return m_currentScene;
 }
@@ -75,15 +53,22 @@ int SceneManager::menuOption()
         case 3:
             m_currentScene = new Lab3();
             break;
+        case 4:
+            m_currentScene = new Lab4();
+            break;
+        case 5:
+            m_currentScene = new Lab5();
+            break;
         case 7:
             m_currentScene = new Lab7();
             break;
+        case 15:
+            m_currentScene = new Lab15();
+            break;
+
         default:
             cout << " Opcion incorrecta!" << endl;
     }
-
-
-    cout << " Opcion " << option << " elegida!" << endl;
 
     return option;
 }
@@ -108,7 +93,7 @@ void SceneManager::showMenu()
     cout << "\n\t 13. Raytracing rayo-triangulo                  ";
     cout << "\n\t 14. Escena 3D con funciones Z-Buffer de OpenGL ";
     cout << "\n\t 15. Escena 3D con algoritmo de Z-Buffer        ";
-    cout << "\n\t 15. Mapeo de texturas en OpenGL                ";
+    cout << "\n\t 16. Mapeo de texturas en OpenGL                ";
 
     int op = this->menuOption();
 }

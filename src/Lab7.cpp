@@ -197,7 +197,7 @@ void Lab7::LSystem(string w, float inicioX, float inicioY)
 
 string Lab7::GenerarPalabra(string axioma, string F, unsigned nivelProduccion)
 {
-    // Cuenta la posición de la cadena (axioma) donde se ecuentra
+    // Cuenta la posiciï¿½n de la cadena (axioma) donde se ecuentra
     unsigned n = 0;
 
     while (n <= nivelProduccion)
@@ -209,7 +209,7 @@ string Lab7::GenerarPalabra(string axioma, string F, unsigned nivelProduccion)
             if ( axioma[cont]== 'F' )
             {
                 axioma.insert(cont, F);  // Insertamos la cadena, es decir regla F
-                cont += F.size();        // Se actualiza la posicion al aumentar el tamaño del axioma
+                cont += F.size();        // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                 axioma.erase(cont, 1);   // Se elimina el F anterior
             }
             else
@@ -226,7 +226,7 @@ string Lab7::GenerarPalabra(string axioma, string F, unsigned nivelProduccion)
 
 string Lab7::GenerarPalabra(string axioma, string Z, string X, unsigned nivelProduccion)
 {
-    // Cuenta la posición de la cadena (axioma) donde se ecuentra
+    // Cuenta la posiciï¿½n de la cadena (axioma) donde se ecuentra
     unsigned n = 0;
 
     while (n <= nivelProduccion)
@@ -238,13 +238,13 @@ string Lab7::GenerarPalabra(string axioma, string Z, string X, unsigned nivelPro
             if ( axioma[cont]== 'Z' )
             {
                 axioma.insert(cont, Z); // Insertamos la cadena, es decir regla Z
-                cont += Z.size();       // Se actualiza la posicion al aumentar el tamaño del axioma
+                cont += Z.size();       // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                 axioma.erase(cont, 1);  // Se elimina el Z anterior
             }
             else if (axioma[cont]== 'X')
             {
                 axioma.insert(cont, X);  // Insertamos la cadena, es decir regla X
-                cont += X.size();        // Se actualiza la posicion al aumentar el tamaño del axioma
+                cont += X.size();        // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                 axioma.erase(cont, 1);   // Borramos el X anterior
             }
             else
@@ -261,7 +261,7 @@ string Lab7::GenerarPalabra(string axioma, string Z, string X, unsigned nivelPro
 
 string Lab7::GenerarPalabra(string axioma, vector<string> F, unsigned nivelProduccion)
 {
-    // Contador del nivel de producción
+    // Contador del nivel de producciï¿½n
     unsigned n = 0;
 
     // La regla se escojera de acuerdo al numero que se asigne pn, que sera aleatorio
@@ -272,7 +272,7 @@ string Lab7::GenerarPalabra(string axioma, vector<string> F, unsigned nivelProdu
 
     while (n <= nivelProduccion)
     {
-        // Cuenta la posición de la cadena (axioma) donde se ecuentra
+        // Cuenta la posiciï¿½n de la cadena (axioma) donde se ecuentra
         int cont = 0;
 
         while ( cont < axioma.size() )
@@ -285,19 +285,19 @@ string Lab7::GenerarPalabra(string axioma, vector<string> F, unsigned nivelProdu
                 if (pn > 0 && pn <= 0.33f)
                 {
                     axioma.insert(cont, F.at(0));  // Insertamos la cadena, es decir regla F[0]
-                    cont += F.at(0).size();        // Se actualiza la posicion al aumentar el tamaño del axioma
+                    cont += F.at(0).size();        // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                     axioma.erase(cont, 1);         // Borramos el F anterior
                 }
                 else if (pn > 0.33f && pn <= 0.66f)
                 {
                     axioma.insert(cont, F.at(1));  // Insertamos la cadena, es decir regla F[1]
-                    cont += F.at(1).size();        // Se actualiza la posicion al aumentar el tamaño del axioma
+                    cont += F.at(1).size();        // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                     axioma.erase(cont, 1);         // Borramos el F anterior
                 }
                 else if(pn > 0.66f && pn <= 1.0f)
                 {
                     axioma.insert(cont, F.at(2));  // Insertamos la cadena, es decir regla F[2]
-                    cont += F.at(2).size();        // Se actualiza la posicion al aumentar el tamaño del axioma
+                    cont += F.at(2).size();        // Se actualiza la posicion al aumentar el tamaï¿½o del axioma
                     axioma.erase(cont, 1);         // Borramos el F anterior
                 }
             }
