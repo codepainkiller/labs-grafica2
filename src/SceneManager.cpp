@@ -84,9 +84,30 @@ int SceneManager::menuOption()
             m_currentScene = new Lab10();
             break;
 
+        case 11:
+            m_currentScene = new Lab11();
+            break;
+
+        case 12:
+            m_currentScene = new Lab12();
+            break;
+
+        case 13:
+            m_currentScene = new Lab13();
+            break;
+
+        case 14:
+            m_currentScene = new Lab14();
+            break;
+
         case 15:
             m_currentScene = new Lab15();
             break;
+        case 16:
+            cout << "\n\n Hecho en Java! \n\n";
+            exit(0);
+            break;
+
 
         default:
             cout << " Opcion incorrecta!" << endl;

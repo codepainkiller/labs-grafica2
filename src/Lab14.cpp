@@ -1,4 +1,4 @@
-#include "Lab2.h"
+#include "Lab14.h"
 
 const GLfloat light_ambient[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
 const GLfloat light_diffuse[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
@@ -10,22 +10,16 @@ const GLfloat mat_diffuse[]    = { 0.8f, 0.8f, 0.8f, 1.0f };
 const GLfloat mat_specular[]   = { 1.0f, 1.0f, 1.0f, 1.0f };
 const GLfloat high_shininess[] = { 100.0f };
 
-Lab2::Lab2()
+Lab14::Lab14()
 {
     //ctor
 }
 
-Lab2::~Lab2()
+Lab14::~Lab14()
 {
     //dtor
 }
-
-void Lab2::inputVariables()
-{
-
-}
-
-void Lab2::drawScene()
+void Lab14::drawScene()
 {
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);
@@ -47,6 +41,8 @@ void Lab2::drawScene()
     glMaterialfv(GL_FRONT, GL_DIFFUSE,   mat_diffuse);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+
+    this->drawEjes(100);
 
     // Draw ground
     glColor3f(0.9f, 0.9f, 0.9f);
@@ -70,7 +66,31 @@ void Lab2::drawScene()
     }
 }
 
-void Lab2::drawSnowMan() {
+void Lab14::inputVariables()
+{
+
+}
+
+void Lab14::drawEjes(int dimension)
+{
+    glPointSize(1);
+
+    glBegin(GL_LINES);
+    glColor3f(1, 0, 0);
+    glVertex3f(-dimension, 0, 0);
+    glVertex3f( dimension, 0, 0);
+
+    glColor3f(0, 1, 0);
+    glVertex3f(0, -dimension, 0);
+    glVertex3f(0,  dimension, 0);
+
+    glColor3f(0, 0, 1);
+    glVertex3f(0, 0, -dimension);
+    glVertex3f(0, 0, dimension);
+    glEnd();
+}
+
+void Lab14::drawSnowMan() {
 
 	glColor3f(1.0f, 1.0f, 1.0f);
 
@@ -96,4 +116,5 @@ void Lab2::drawSnowMan() {
 	glRotatef(0.0f,1.0f, 0.0f, 0.0f);
 	glutSolidCone(0.08f,0.5f,10,2);
 }
+
 

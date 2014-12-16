@@ -12,6 +12,10 @@
 #include "Lab8.h"
 #include "Lab9.h"
 #include "Lab10.h"
+#include "Lab11.h"
+#include "Lab12.h"
+#include "Lab13.h"
+#include "Lab14.h"
 #include "Lab15.h"
 #include <iostream>
 #include <vector>

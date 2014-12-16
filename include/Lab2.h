@@ -13,6 +13,8 @@ class Lab2 : public Scene
 
         void drawScene();
 
+        void drawSnowMan();
+
     protected:
     private:
 };
